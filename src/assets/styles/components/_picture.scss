@@ -1,0 +1,15 @@
+.picture{
+    position: relative;
+    width: 668px;
+    height: 792px;
+    overflow: hidden;
+    margin:auto;
+    &__content{
+        background-size: cover;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 120%;
+    }
+}

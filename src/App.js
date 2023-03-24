@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.scss';
 import './assets/styles/style.scss'
 import Hero from './components/Hero'
+import Content from './components/Content'
+
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Hero />
+        <Content />
       </header>
     </div>
   );

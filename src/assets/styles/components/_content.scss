@@ -1,0 +1,21 @@
+.content{
+    background: black;
+    width: 100%;
+    &__title-section {
+        margin: 72px 0;
+    h1{
+        color: map-get($map: $colors, $key: pink );
+        font-size: 40px;
+        line-height: 44.8px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 14px;
+        line-height: 18.06px;
+        font-weight: 300;
+        margin-top: 9px;
+    }
+
+    }
+    
+}

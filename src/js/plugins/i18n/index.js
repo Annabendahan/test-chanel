@@ -9,6 +9,10 @@ const resources = {
     translation: {
       hero: {
         label: 'GO TO THE MOON'
+      }, 
+      content: {
+        title: 'OVER THE MOON *', 
+        desc: 'Quatre inconnus se rencontrent dans un ascenseur pour la Lune.'
       }
     }
   },

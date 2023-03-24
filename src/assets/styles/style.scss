@@ -10,4 +10,7 @@
     './helpers/mixins',
     './helpers/variables';
 
-@import './components/hero';
+@import 
+    './components/hero',
+    './components/content',
+    './components/picture';
