@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 function Picture (props) {
 
-
     gsap.utils.toArray(".picture .picture__content").forEach((section, i) => {
         const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
         gsap.fromTo(section,{ 

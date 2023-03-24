@@ -20,7 +20,7 @@ function Content() {
         <Picture src={imari} /> 
         <div className="content__end-section">
             <h2> {t('content.end.title')}</h2>
-            <p  className="content__end-section__desc"> {t('content.end.desc')} </p>
+            <p className="content__end-section__desc"> {t('content.end.desc')} </p>
             <Cta label={t('content.cta2')} />
         </div>
         <div className="content__note">{t('content.note')}</div>

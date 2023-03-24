@@ -48,13 +48,10 @@ function Slider() {
     <div className="slider">
         <div className="slider__nav"> 
           <div className="slider__nav__arrows"> 
-          
             <div className={`${slide === 1 ? "slider__nav__arrows__left" : "slider__nav__arrows__left__hidden" } `} onClick={setPreviousSlide}> 
             </div>
-            
             <div className={`${slide === 1 ? "slider__nav__arrows__right__hidden" : "slider__nav__arrows__right" } `} onClick={setNextSlide}> 
             </div>
-           
           </div>
         </div>
         <div className="slider__pages">
@@ -74,7 +71,10 @@ function Slider() {
 
             </div>
 
-        <div className="slider__count"> {slide+1} / {slides} </div>
+        <div className="slider__count"> 
+       
+          {slide+1} / {slides} 
+        </div>
     </div>
   );
 }

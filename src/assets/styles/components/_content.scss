@@ -6,30 +6,45 @@
         font-size: 14px;
         line-height: 18.06px;
         font-weight: 300;
-      
+        width: 335px;
+        margin:auto;
+        letter-spacing: 0.1px;
+        @include breakpoint($b-tab-desk) {
+            font-size: 14px;
+            width: 796px;
+        }
        }
-    
     &__title-section {
         margin: 72px 0;
     h1{
         color: map-get($map: $colors, $key: pink );
-        font-size: 40px;
-        line-height: 44.8px;
+        font-size: 25px;
+        line-height: 31px;
         font-weight: 600;
+        margin:auto;
         margin-bottom: 9px;
+        width: 335px;
+        @include breakpoint($b-tab-desk) {
+            font-size: 40px;
+            line-height: 44.8px;
+            width: 796px;
+        }
     }
-   
     }
     &__end-section{
         h2{
             color: map-get($map: $colors, $key: pink );
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 20px;
+            line-height: 26px;
             font-weight: 600;
             margin-bottom: 9px;
+            @include breakpoint($b-tab-desk) {
+                font-size: 30px;
+                line-height: 36px;
+            }
         }
         &__desc{
-            margin-bottom: 15px;
+                margin-bottom: 15px !important;
         }
        margin: 72px auto;
       
@@ -41,9 +56,11 @@
         font-weight: 300;
         line-height: 15.95px;
         width: 1208px;
-        margin-left: 116px;
-        margin-bottom: 72px;
-
-    }
-    
+        margin-left: 20px;
+        margin-bottom: 54px;
+        @include breakpoint($b-tab-desk) {
+            margin-left: 116px;
+            margin-bottom: 72px;
+        }
+    } 
 }

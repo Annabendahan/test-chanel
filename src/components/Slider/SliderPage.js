@@ -11,9 +11,10 @@ function SliderPage(props) {
         <div className="slider__page"> 
           <div className="slider__page__content"> 
             <div className="slider__page__infos"> 
-             <h2>{props.title1}</h2>
-             <h2>{props.title2}</h2>
-             <p> {props.desc}</p>
+             <h2 className="slider__page__infos__titles">
+               {props.title1}<br/>
+               {props.title2}</h2>
+             <p className="slider__page__infos__desc"> {props.desc}</p>
              <div className="slider__page__infos__link-section"> 
                <a className="slider__page__infos__link-section__link" href="" >{props.link}</a>
                <div className="slider__page__infos__link-section__underline"></div>

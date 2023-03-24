@@ -8,22 +8,50 @@
     &__page{
         width:100vw; 
         &__content{
-            width: 80vw;
+            width: 90vw;
             margin:auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            @include breakpoint($b-tab-desk) {
+                width: 80vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
         }
+        
         &__infos{
-            width: 384px;
+            width: 90vw;
+            height: 150px;
+            @include breakpoint($b-tab-desk) {
+                width: 384px;
+                height: unset;
+            }
         h2{
-            font-size: 30px;
-            color: map-get($map: $colors, $key: pink )
+            font-size: 20px;
+            line-height: 26px;
+            color: map-get($map: $colors, $key: pink );
+            @include breakpoint($b-tab-desk) {
+                font-size: 30px;
+                line-height: 36px;
+            }
         }
         p{
             font-size: 14px;
             font-weight: 300;
             margin-top: 9px;
+        }
+        &__titles{
+            height: 50px;
+            @include breakpoint($b-tab-desk) {
+                height: unset;
+            }
+        }
+        &__img{
+            width: 335px;
+            height: 446px;
+            @include breakpoint($b-tab-desk) {
+                width: 487px;
+                height: 649px;
+            }
         }
         &__link-section{
             text-align: center;
@@ -37,6 +65,10 @@
                 font-size: 11px;
                 font-weight: 600;
                 line-height: 18.04px;
+                &:hover ~ .slider__page__infos__link-section__underline {
+                    opacity: 1;
+                    transition: opacity 0.5s ease-in-out;
+                }
             }  
             &__underline{
                 border-bottom: 1px solid white;
@@ -44,16 +76,10 @@
                 height: 2px;
                 opacity: 0;
             }
-            &:hover >  .slider__page__infos__link-section__underline {
-                opacity: 1;
-                transition: opacity 0.5s ease-in-out;
-            }
+            
         }
     }
-        &__img{
-            width: 487px;
-            height: 649px;
-        }
+       
    
     }
     &__count{
@@ -64,22 +90,31 @@
     &__nav{
         z-index: 99;
         position: absolute;
-        top: 50%;
+        bottom: 3px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-       
+        @include breakpoint($b-tab-desk) {
+            top: 50%;
+        }
         &__arrows{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 80%;
+            width: 20%;
+            @include breakpoint($b-tab-desk) {
+                width: 80%;
+            }
 
             div{
-                width: 12px; 
-                height: 12px;
+                width: 8px; 
+                height: 8px;
+                @include breakpoint($b-tab-desk) {
+                    width: 12px; 
+                    height: 12px;
+                }
             }
             &__right{
                 border: 1px solid white;

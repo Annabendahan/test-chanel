@@ -3,21 +3,18 @@
     &__button{
         border: 1px solid white;
         background: black;
-        padding: 16px 21px 18px ;
         height: 48px;
         width: 236px;
         color: white;
-     
         p {
             font-size: 11px;
             font-weight: 600;
+            width: unset;
         }
-    }
-    &:hover > .cta__button{
-        background-color: white;
-        color: black;
-        transition: background-color 1s ease;
-
-    }
-   
+        &:hover {
+            background-color: white;
+            color: black;
+            transition: background-color 1s ease;
+        }
+    }  
 }

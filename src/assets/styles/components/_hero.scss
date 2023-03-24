@@ -9,20 +9,31 @@ $hero-background-desk: "../../img/hero.jpg";
     background-size:cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    height: 400px;
+    @include breakpoint($b-tab-desk) {
+        height: 100vh;
+    }
     &__label{
         position: absolute;
-        bottom: 72px;
+        bottom: -40px;
         width: 100%;
         display: flex; 
         flex-direction: column;
         align-items: center;
+        @include breakpoint($b-tab-desk) {
+            bottom: 72px;
+        }
         p{
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 20px;
+            line-height: 26px;
             margin:0px;
-            width: 796px;
+            width: 335px;
             font-weight: 600;
+            @include breakpoint($b-tab-desk) {
+                font-size: 30px;
+                line-height: 36px;
+                width: 796px;
+            }
 
         }
         
