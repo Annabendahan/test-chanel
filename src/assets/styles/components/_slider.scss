@@ -1,0 +1,105 @@
+.slider{
+    position: relative;
+    margin: 54px auto;
+    &__pages{
+        width: 200vw;
+        display: flex;
+    }
+    &__page{
+        width:100vw; 
+        &__content{
+            width: 80vw;
+            margin:auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &__infos{
+            width: 384px;
+        h2{
+            font-size: 30px;
+            color: map-get($map: $colors, $key: pink )
+        }
+        p{
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 9px;
+        }
+        &__link-section{
+            text-align: center;
+            margin:auto;
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            &__link{
+                font-size: 11px;
+                font-weight: 600;
+                line-height: 18.04px;
+            }  
+            &__underline{
+                border-bottom: 1px solid white;
+                width: 70px;
+                height: 2px;
+                opacity: 0;
+            }
+            &:hover >  .slider__page__infos__link-section__underline {
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+            }
+        }
+    }
+        &__img{
+            width: 487px;
+            height: 649px;
+        }
+   
+    }
+    &__count{
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 18px;
+    }
+    &__nav{
+        z-index: 99;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+       
+        &__arrows{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+
+            div{
+                width: 12px; 
+                height: 12px;
+            }
+            &__right{
+                border: 1px solid white;
+                border-left: none;
+                border-bottom: none;
+                transform: rotate(45deg);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            &__left{
+                border: 1px solid white;
+                border-left: none;
+                border-bottom: none;
+                transform: rotate(-135deg);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+}

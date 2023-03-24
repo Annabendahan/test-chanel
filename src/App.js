@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import './assets/styles/style.scss'
 import Hero from './components/Hero'

@@ -12,7 +12,28 @@ const resources = {
       }, 
       content: {
         title: 'OVER THE MOON *', 
-        desc: 'Quatre inconnus se rencontrent dans un ascenseur pour la Lune.'
+        desc: 'Quatre inconnus se rencontrent dans un ascenseur pour la Lune.', 
+        slider: {
+            s1: {
+              title1: 'PREMIERE ROCK  ', 
+              title2: ' PINK BLOSSOM', 
+              desc: 'La PREMIÈRE ROCK ose le rose avec sa chaîne en acier entrelacée de cuir pastel. En édition limitée.', 
+              link: 'DÉCOUVREZ'
+            }, 
+            s2: {
+              title1: 'LOREM IPSUM', 
+              title2: '',
+              desc: 'La PREMIÈRE ROCK ose le rose avec sa chaîne en acier entrelacée de cuir pastel. En édition limitée.', 
+              link: 'DÉCOUVREZ'
+            }
+        },
+        cta1: 'DÉCOUVRIR LA SÉLECTION',
+        cta2: 'TROUVEZ VOTRE BOUTIQUE', 
+        end: {
+          title: 'DÉCOUVRIR LES PIÈCES EN BOUTIQUE', 
+          desc: 'Découvrez les nouvelles pièces dans votre boutique CHANEL'
+        },
+        note: '*Destination lune'
       }
     }
   },
