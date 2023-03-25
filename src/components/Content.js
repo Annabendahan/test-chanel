@@ -10,6 +10,10 @@ function Content() {
     const { t, i18n } = useTranslation();
   return (
     <div className="content">
+         <div className="content__hero-labelmob">
+           <h3>{t('hero.label')}</h3>
+         </div>
+       
          <div className="content__title-section">
             <h1> {t('content.title')}</h1>
             <p> {t('content.desc')} </p>

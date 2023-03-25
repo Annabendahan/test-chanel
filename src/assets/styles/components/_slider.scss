@@ -1,6 +1,9 @@
 .slider{
     position: relative;
-    margin: 54px auto;
+    margin: 72px auto 36px;
+    @include breakpoint($b-tab-desk) {
+        margin: 54px auto;
+    }
     &__pages{
         width: 200vw;
         display: flex;
@@ -9,12 +12,21 @@
         width:100vw; 
         &__content{
             width: 90vw;
-            margin:auto;
+            margin:auto ;
             @include breakpoint($b-tab-desk) {
                 width: 80vw;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+            }
+        }
+
+        &__img{
+            width: 335px;
+            height: 446px;
+            @include breakpoint($b-tab-desk) {
+                width: 487px;
+                height: 649px;
             }
         }
         
@@ -25,10 +37,11 @@
                 width: 384px;
                 height: unset;
             }
-        h2{
+        h2 {
             font-size: 20px;
             line-height: 26px;
             color: map-get($map: $colors, $key: pink );
+            margin-bottom: 9px;
             @include breakpoint($b-tab-desk) {
                 font-size: 30px;
                 line-height: 36px;
@@ -37,7 +50,10 @@
         p{
             font-size: 14px;
             font-weight: 300;
-            margin-top: 9px;
+            margin-bottom: 18px;
+            @include breakpoint($b-tab-desk) {
+                width: 384px;
+            }
         }
         &__titles{
             height: 50px;
@@ -45,23 +61,17 @@
                 height: unset;
             }
         }
-        &__img{
-            width: 335px;
-            height: 446px;
-            @include breakpoint($b-tab-desk) {
-                width: 487px;
-                height: 649px;
-            }
-        }
+       
+
         &__link-section{
             text-align: center;
             margin:auto;
-            margin-top: 18px;
             display: flex;
             flex-direction: column;
             align-items: center;
             
             &__link{
+                font-family: 'ABChanel Corpo Semi Bold';
                 font-size: 11px;
                 font-weight: 600;
                 line-height: 18.04px;
@@ -72,7 +82,7 @@
             }  
             &__underline{
                 border-bottom: 1px solid white;
-                width: 70px;
+                width: 85px;
                 height: 2px;
                 opacity: 0;
             }
@@ -84,13 +94,17 @@
     }
     &__count{
         font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.1px;;
         font-weight: 600;
         margin-top: 18px;
+        font-family: 'ABChanel Corpo Semi Bold';
+
     }
     &__nav{
-        z-index: 99;
+        
         position: absolute;
-        bottom: 3px;
+        bottom: 4px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -100,6 +114,7 @@
             top: 50%;
         }
         &__arrows{
+            z-index: 99;
             display: flex;
             justify-content: space-between;
             align-items: center;
