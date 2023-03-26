@@ -23,7 +23,7 @@ const resources = {
             s2: {
               title1: 'LOREM IPSUM', 
               title2: '',
-              desc: 'La PREMIÈRE ROCK ose le rose avec sa chaîne en acier entrelacée de cuir pastel. En édition limitée.', 
+              desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere eleifend blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 
               link: 'DÉCOUVREZ'
             }
         },

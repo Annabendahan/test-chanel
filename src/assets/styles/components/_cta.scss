@@ -1,15 +1,17 @@
 .cta{
-    margin-bottom: 72px;
+    margin-bottom: 90px;
     @include breakpoint($b-tab-desk) {
-        margin-bottom: 54px;
+        margin-bottom: 126px;
     }
+   
     &__button{
         border: 1px solid white;
         background: black;
         height: 48px;
         width: 236px;
         color: white;
-        p {
+        p { 
+            line-height: 13.97px;
             font-size: 11px;
             font-weight: 600;
             width: unset;

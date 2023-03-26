@@ -2,8 +2,12 @@
     overflow-x: hidden;
     background: black;
     width: 100%;
+    padding-bottom: 54px;
+    @include breakpoint($b-tab-desk) {
+        padding-bottom: 72px;
+    }
     &__hero-labelmob {
-        margin: 18px auto 72px;
+        margin: 18px auto 77px;
         h3 {
             font-family: 'ABChanel Corpo Semi Bold';
             width: 100%;
@@ -13,6 +17,9 @@
             font-size: 20px;
             line-height: 26px;
             font-weight: 600;;
+        }
+        @include breakpoint($b-tab-desk) {
+            display: none;
         }
     }
     p {
@@ -30,7 +37,7 @@
     &__title-section {
         margin: 24px 0;
         @include breakpoint($b-tab-desk) {
-            margin: 72px 0;
+            margin: 99px 0;
         }
     h1{
         color: map-get($map: $colors, $key: pink );
@@ -48,6 +55,10 @@
     }
     }
     &__end-section{
+        margin: 90px auto 0;
+        @include breakpoint($b-tab-desk) {
+            margin: 126px auto 0;
+        }
         h2{
             color: map-get($map: $colors, $key: pink );
             font-size: 20px;
@@ -59,12 +70,13 @@
             @include breakpoint($b-tab-desk) {
                 font-size: 30px;
                 line-height: 36px;
+                width: 1002px;
             }
         }
         &__desc{
                 margin-bottom: 15px !important;
         }
-       margin: 72px auto;
+     
       
     }
     &__note{
@@ -75,10 +87,8 @@
         line-height: 15.95px;
         width: 1208px;
         margin-left: 20px;
-        margin-bottom: 54px;
         @include breakpoint($b-tab-desk) {
             margin-left: 116px;
-            margin-bottom: 72px;
         }
     } 
 }

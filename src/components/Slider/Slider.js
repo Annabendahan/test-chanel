@@ -73,7 +73,8 @@ function Slider() {
 
         <div className="slider__count"> 
        
-          {slide+1} / {slides} 
+        <div className="slider__count__left"> {slide+1} </div>
+        <div className="slider__count__right"> / {slides} </div>
         </div>
     </div>
   );

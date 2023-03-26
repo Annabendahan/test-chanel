@@ -2,7 +2,7 @@
     position: relative;
     margin: 72px auto 36px;
     @include breakpoint($b-tab-desk) {
-        margin: 54px auto;
+        margin: 126px auto 63px;
     }
     &__pages{
         width: 200vw;
@@ -97,8 +97,15 @@
         line-height: 18px;
         letter-spacing: 0.1px;;
         font-weight: 600;
-        margin-top: 18px;
         font-family: 'ABChanel Corpo Semi Bold';
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 42px;
+        margin: 18px auto 0;
+        &__left{
+            width:10px;
+        }
 
     }
     &__nav{
