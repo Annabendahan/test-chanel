@@ -1,7 +1,9 @@
-import hero from "../assets/img/hero.jpg"
+// Hero section
+
 import { useTranslation } from 'react-i18next';
+
 function Hero() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
   return (
     <div className="hero">
         <div className="hero__label"> 

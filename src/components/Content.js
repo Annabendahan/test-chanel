@@ -1,3 +1,5 @@
+// Content Selection, hero component not included
+
 import Picture from './Picture'
 import Slider from './Slider/Slider'
 import Cta from './Cta'
@@ -8,9 +10,8 @@ import imari from '../assets/img/imari.jpg'
 import imariMob from '../assets/img/imari-mobile.jpg'
 
 
-
 function Content() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
   return (
     <div className="content">
          <div className="content__hero-labelmob">

@@ -19,6 +19,7 @@
                 align-items: center;
                 justify-content: space-around;
             }
+           
         }
 
         &__img{
@@ -26,16 +27,30 @@
             height: 446px;
             @include breakpoint($b-tab-desk) {
                 width: 487px;
+                height: 550px;
+            }
+            @include breakpoint($b-desk) {
+                width: 487px;
+                height: 600px;
+            }
+            @include breakpoint($b-xlarge) {
+                width: 487px;
                 height: 649px;
             }
         }
         
         &__infos{
             width: 90vw;
-            height: 150px;
+            height: 160px;
             @include breakpoint($b-tab-desk) {
                 width: 384px;
                 height: unset;
+            }
+            &__desc{
+                height: 45px;
+                @include breakpoint($b-tab-desk) {
+                   height: unset;
+                }
             }
         h2 {
             font-size: 20px;
@@ -127,7 +142,13 @@
             align-items: center;
             width: 20%;
             @include breakpoint($b-tab-desk) {
-                width: 80%;
+                width: 85%;
+            }
+            @include breakpoint($b-xlarge) {
+                width: 78%;
+            }
+            @include breakpoint($b-xxlarge) {
+                width: 75%;
             }
 
             div{

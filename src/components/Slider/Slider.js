@@ -1,3 +1,5 @@
+// Slider component
+
 import { useTranslation } from 'react-i18next';
 import {useState} from 'react';
 import s1 from '../../assets/img/slider-1.jpg'
@@ -7,9 +9,32 @@ import SliderPage from './SliderPage';
 
 
 function Slider() {
-    const { t, i18n } = useTranslation();
+    const { t} = useTranslation();
     const [slide, setSlide] = useState(0);
     const slides = 2
+    const [touchPosition, setTouchPosition] = useState(null)
+
+
+    const handleTouchStart = (e) => {
+      const touchDown = e.touches[0].clientX
+      setTouchPosition(touchDown)
+  }
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition
+    if(touchDown === null) {
+        return
+    }
+    const currentTouch = e.touches[0].clientX
+    const diff = touchDown - currentTouch
+    if (diff > 5) {
+      setNextSlide()
+    }
+    if (diff < -5) {
+      setPreviousSlide()
+    }
+    setTouchPosition(null)
+}
 
     const nextSlide = (elem) => {
         gsap.to(
@@ -45,7 +70,7 @@ function Slider() {
 
 
   return (
-    <div className="slider">
+    <div className="slider" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
         <div className="slider__nav"> 
           <div className="slider__nav__arrows"> 
             <div className={`${slide === 1 ? "slider__nav__arrows__left" : "slider__nav__arrows__left__hidden" } `} onClick={setPreviousSlide}> 
