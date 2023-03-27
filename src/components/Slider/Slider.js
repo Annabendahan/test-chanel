@@ -14,12 +14,13 @@ function Slider() {
     const slides = 2
     const [touchPosition, setTouchPosition] = useState(null)
 
-
+// Get user touch position
     const handleTouchStart = (e) => {
       const touchDown = e.touches[0].clientX
       setTouchPosition(touchDown)
   }
 
+  // Check user swiping movement 
   const handleTouchMove = (e) => {
     const touchDown = touchPosition
     if(touchDown === null) {
@@ -35,6 +36,7 @@ function Slider() {
     }
     setTouchPosition(null)
 }
+
 
     const nextSlide = (elem) => {
         gsap.to(
@@ -57,13 +59,14 @@ function Slider() {
         )
     }
 
+     // Swipe next
     const setNextSlide = () => {
-        console.log('clickednext')
         nextSlide(".slider__pages"); 
         setSlide(1)
     }
+
+     // Swipe previous
     const setPreviousSlide = () => {
-        console.log('clickedprevious')
         previousSlide(".slider__pages"); 
         setSlide(0)
     }
@@ -80,26 +83,24 @@ function Slider() {
           </div>
         </div>
         <div className="slider__pages">
-       <SliderPage 
+          <SliderPage 
             title1={t('content.slider.s1.title1')} 
             title2={t('content.slider.s1.title2')}
             desc={t('content.slider.s1.desc')}
             img={s1}
             link= {t('content.slider.s1.link')}  />
       
-      <SliderPage 
+          <SliderPage 
             title1={t('content.slider.s2.title1')} 
             title2={t('content.slider.s2.title2')}
             desc={t('content.slider.s2.desc')}
             img={s2}
             link= {t('content.slider.s2.link')}  />
-
-            </div>
+        </div>
 
         <div className="slider__count"> 
-       
-        <div className="slider__count__left"> {slide+1} </div>
-        <div className="slider__count__right"> / {slides} </div>
+          <div className="slider__count__left"> {slide+1} </div>
+          <div className="slider__count__right"> / {slides} </div>
         </div>
     </div>
   );

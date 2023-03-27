@@ -15,7 +15,6 @@ function SliderPage(props) {
                <a className="slider__page__infos__link-section__link" href="/" >{props.link}</a>
                <div className="slider__page__infos__link-section__underline"></div>
              </div>
-            
             </div>
             <div className="slider__page__img"> 
              <img src={props.img} alt="slider-img"/>
